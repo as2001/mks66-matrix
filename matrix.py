@@ -15,8 +15,9 @@ def print_matrix( matrix ):
     for r in range(4):
         line = ""
         for c in matrix:
-            line += c[r] + "  "
+            line += str(c[r]) + "  "
         print(line)
+    print("\n")
     pass
 
 #turn the parameter matrix into an identity matrix
@@ -40,8 +41,8 @@ def matrix_mult( m1, m2 ):
         for r in range(4):
             sum = 0
             for c in range(4):
-                sum += m2[col][r] * m1[c][r]
-        
+                sum += tmp[c] * m1[c][r]
+            m2[col][r] = sum        
     pass
 
 
@@ -54,3 +55,18 @@ def new_matrix(rows = 4, cols = 4):
         for r in range( rows ):
             m[c].append( 0 )
     return m
+
+A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+B = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
+matrix_mult(A,B)
+print_matrix(A)
+print_matrix(B)
+matrix_mult(B,A) 
+print_matrix(A)
+print_matrix(B)
+ident(B)
+matrix_mult(B,A)
+print_matrix(A)
+print_matrix(B)
+    
+
