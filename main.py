@@ -1,7 +1,6 @@
 from display import *
 from draw import *
 from matrix import *
-import math
 
 screen = new_screen()
 color = [ 255, 0, 255 ]
@@ -19,14 +18,27 @@ rotation[1][0] = -1
 draw_lines(matrix,screen,color)
 
 matrix_mult(rotation,matrix)
+for x in matrix:
+    if x[0] != 0:
+        x[0] += 500
 
 draw_lines(matrix,screen,color)
 
 matrix_mult(rotation,matrix)
+for x in matrix:
+    if x[0] != 0:
+        x[0] += 500
 
 draw_lines(matrix,screen,color)
 
 matrix_mult(rotation,matrix)
+for x in matrix:
+    if x[0] != 0:
+        x[0] += 500
+
+draw_lines(matrix,screen,color)
+
+save_extension(screen, 'img.png')
 
 display(screen)
 
@@ -41,7 +53,6 @@ print_matrix(B)
 ident(B)
 matrix_mult(B,A)
 print_matrix(A)
-print_matrix(B)
 
 ##C = [[1,2,3,1],[4,5,6,1]]
 ##print_matrix(C)
