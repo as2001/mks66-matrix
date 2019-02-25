@@ -2,6 +2,30 @@ from display import *
 from draw import *
 from matrix import *
 
+A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+B = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
+matrix_mult(A,B)
+print_matrix(A)
+print_matrix(B)
+matrix_mult(B,A) 
+print_matrix(A)
+print_matrix(B)
+ident(B)
+matrix_mult(B,A)
+print_matrix(A)
+
+##C = [[1,2,3,1],[4,5,6,1]]
+##print_matrix(C)
+##D = new_matrix()
+##ident(D)
+##print_matrix(D)
+##matrix_mult(D,C)
+##print_matrix(C)
+##D = [[1,2,3,1],[4,5,6,1],[7,8,9,1],[10,11,12,1]]
+##print_matrix(D)
+##matrix_mult(D,C)
+##print_matrix(C)
+
 screen = new_screen()
 color = [ 255, 0, 255 ]
 matrix = new_matrix()
@@ -41,30 +65,4 @@ draw_lines(matrix,screen,color)
 save_extension(screen, 'img.png')
 
 display(screen)
-
-A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
-B = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
-matrix_mult(A,B)
-print_matrix(A)
-print_matrix(B)
-matrix_mult(B,A) 
-print_matrix(A)
-print_matrix(B)
-ident(B)
-matrix_mult(B,A)
-print_matrix(A)
-
-##C = [[1,2,3,1],[4,5,6,1]]
-##print_matrix(C)
-##D = new_matrix()
-##ident(D)
-##print_matrix(D)
-##matrix_mult(D,C)
-##print_matrix(C)
-##D = [[1,2,3,1],[4,5,6,1],[7,8,9,1],[10,11,12,1]]
-##print_matrix(D)
-##matrix_mult(D,C)
-##print_matrix(C)
-
-
  
