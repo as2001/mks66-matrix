@@ -28,6 +28,8 @@ draw_lines(matrix,screen,color)
 
 matrix_mult(rotation,matrix)
 
+display(screen)
+
 A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 B = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
 matrix_mult(A,B)
@@ -54,6 +56,4 @@ print_matrix(B)
 ##print_matrix(C)
 
 
-##draw_lines( matrix, screen, color )
-##display(screen)
  
